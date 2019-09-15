@@ -2,9 +2,9 @@ body{
   background-image: 
     repeating-radial-gradient(
       circle at 0 0, 
-      #2b404f,
+      #19252e,
       #60a8e0 900px,
-       #2b404f 3000px/* determines size */
+       #19252e 3000px/* determines size */
     );
 }
 /*
@@ -14,7 +14,7 @@ background-image: url('background.png');
 
 
 
-.intro-header ,
+/*.intro-header ,*/
 #portfolio .portfolio-item {
 background: #101b1f; /*BACKGROUND COLOR HERE*/
 border: 2px solid #DA7B93;/*BACKGROUND COLOR HERE*/
@@ -46,6 +46,17 @@ nav.dropdownmenu {
     
 }
 
+.header-bg {
+
+
+
+background: url("tile3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 
 .dropdownmenu ul,
 .dropdownmenu li {
@@ -120,8 +131,8 @@ li:hover ul#submenu {
 
 
 .intro-header {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 60px;
+	padding-bottom: 90px;
 
 	text-align: center;
   width: 100%;
@@ -135,7 +146,7 @@ li:hover ul#submenu {
 
 
 .intro-header>h1 {
-	
+	text-shadow: 0px 0px 9px #000,0px 0px 5px #000,0px 0px 4px #000;
 	letter-spacing: 3px;
 	font: 5em Lucida Sans Unicode;
 	color: rgba(255, 255, 255, 1);
@@ -143,7 +154,7 @@ li:hover ul#submenu {
 
 
 .intro-header>h3 {
-	
+	text-shadow: 0px 0px 9px #000,0px 0px 4px #000,0px 0px 5px #000;
 	font:2.5em Lucida Sans Unicode;
 letter-spacing: 2px;
 	color: rgba(255, 255, 255, 1);
