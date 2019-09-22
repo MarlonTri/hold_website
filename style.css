@@ -7,14 +7,17 @@ body{
        #19252e 3000px/* determines size */
     );
 }
-/*
-background-color: #D1E8E2;
-background-image: url('background.png');
-	background-blend-mode: lighten;*/
 
 
+.thumb1 { 
+  background: url(blah.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 250px;
+  height: 250px;
+}
 
-/*.intro-header ,*/
+.thumb1:hover {  }
+
+
 #portfolio .portfolio-item {
 background: #101b1f; /*BACKGROUND COLOR HERE*/
 border: 2px solid #DA7B93;/*BACKGROUND COLOR HERE*/
@@ -50,7 +53,7 @@ nav.dropdownmenu {
 
 
 
-background: url("tile3.jpg") no-repeat center center fixed;
+background: url("home/tile.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
