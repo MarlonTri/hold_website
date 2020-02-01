@@ -65,6 +65,7 @@ background: url("home/tile.jpg") no-repeat center center fixed;
 .dropdownmenu li {
 	margin: 0;
 	padding: 0;
+    color: #FFFFFF;
 }
 
 .dropdownmenu ul {

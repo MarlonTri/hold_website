@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Marlon Portfolio</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+      <link rel="stylesheet" href="../style.css">
+   </head>
+   <body>
+      <div class="header-bg">
+         <div class="row">
+            <nav class="dropdownmenu">
+               <ul>
+                  <li><a href="https://marlontri.github.io/">Home</a></li>
+                  <li><a href="resume.pdf">Resume</a></li>
+                  <li>
+                     <a >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Projects &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                     <ul id="submenu">
+                        <li><a href="../polyChaos/index.html">Polynomial Chaos</a></li>
+                        <li><a href="../polyChaos3D/index.html">Polynomial Chaos - Now 3D!</a></li>
+                        <li><a href="">WebGL Project</a></li>
+                        <li><a href="">Dragon Curve</a></li>
+                        <li><a href="">Timelapse Splicer</a></li>
+                        <li><a href="">Blender Portfolio</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div class="intro-header">
+            <h1>3D Polynomial Chaos</h1>
+            <hr class="intro-divider">
+            <h3>Generated in Blender with Python</h3>
+         </div>
+      </div>
+      <div class="container project-body">
+         <div class="col-md col-sm">
+            <div class="pull-right"><img src="swirl.png"/  width="350" height="350" style="margin:20px 20px"> </div>
+            <h3>Generalizing to 3D, and converting point cloud to mesh</h3>
+            <br> 
+            <h4>The previous project involved iteration using two bivariate polynomials. To generalize this to 3D, I starting using three trivariate polynomials now instead. A single trivariate degree two polynomial has the form
+               \[f(x,y,z) = c_1 + c_2 x + c_3 y + c_4 z + c_5 x^2 + c_6 xy + c_7 xz + c_8 y^2 + c_9 yz + c_{10} z^2 \]
+               Three of these trivariate degree two polynomials now contain 30 degrees of freedom, equivalently a 30-dimensional search space for interesting equations. 
+<br> Significant increase in computation times occurs as well now, and no clear way to represent these objects. After a couple million iterations on 3D points, we now have a massive set of 3D points. Unlike 2D images 
+where you simply light up the pixel where the the points are most concentrated, 3D doesn't have nice analogues. Voxels are computationally expensive and look bad. Addditionally, the dimension of the histogram greatly affects it's computation speed.              </h4>
+            
+         </div>
+      </div>
+      </div>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+   </body>
+</html>
