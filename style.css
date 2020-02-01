@@ -6,11 +6,16 @@ body{
       #60a8e0 900px,
        #19252e 3000px/* determines size */
     );
+
 }
 
-
-
-
+html{
+  min-height: 100%;
+  position:relative;
+}
+body {
+  height: 100%;
+}
 
 
 #portfolio .portfolio-item {
@@ -191,8 +196,8 @@ hr.intro-divider {
 /* social buttons */
 
 .btn {
-	display: inline-block;
-	color: #ffffff;
+	/*display: inline-block;*/
+	color: #ffffff!important;
 	border: 2px solid #DA7B93;/*BACKGROUND COLOR HERE*/
 border-radius: 4px;
 	background: #202b2f;
@@ -376,6 +381,36 @@ section {
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin: 0;
+}
+
+
+.project-body {
+	/*max-width: 400px;*/
+	/*margin: auto;*/
+	background-color: rgba(0, 0, 0, 0.8);
+	/*text-align: center;*/
+	padding: 25px;
+}
+
+.project-body h4 {
+	color: #fff;
+	text-transform: none;
+	margin: 0;
+    font-size: 18px;
+}
+
+.project-body h3 {
+	color: #fff;
+	text-transform: none;
+	margin: 0;
+    font-size: 24px;
+}
+
+.project-body p {
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 13px;
