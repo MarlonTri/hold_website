@@ -412,8 +412,7 @@ section {
 }
 
 .project-body p {
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-style: italic;
+	color: #fff;
 	font-size: 13px;
 	margin: 0;
 }
