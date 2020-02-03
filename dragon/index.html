@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Marlon Portfolio</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+      <link rel="stylesheet" href="../style.css">
+   </head>
+   <body>
+      <div class="header-bg">
+         <div class="row">
+            <nav class="dropdownmenu">
+               <ul>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../resume.pdf">Resume</a></li>
+                  <li>
+                     <a >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Projects &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                     <ul id="submenu">
+                        <li><a href="../polyChaos/index.html">Polynomial Chaos</a></li>
+                        <li><a href="../polyChaos3D/index.html">Polynomial Chaos - Now 3D!</a></li>
+                        <li><a href="">WebGL Project</a></li>
+                        <li><a href="../dragon/index.html">Dragon Curve</a></li>
+                        <li><a href="">Timelapse Splicer</a></li>
+                        <li><a href="">Blender Portfolio</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div class="intro-header">
+            <h1>Dragon Curve Coloring</h1>
+            <hr class="intro-divider">
+            <h3>Generated in Python using PyGame</h3>
+         </div>
+      </div>
+      <div class="container project-body">
+         <div class="col-md col-sm">
+            <div class="pull-right" style="margin:15px 15px"><figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Dragon_Curve_unfolding_zoom_numbered.gif"  width="300" height="300" /> 
+    <figcaption style="text-align: right; color=#FFF"><p>Credit to  <a href ="https://en.wikipedia.org/wiki/Dragon_curve" target="_blank">Wikipedia</a>  for this picture</p></figcaption>
+</figure><figure>
+    <div class="pull-right" style="margin:15px 15px"><img src="http://mathworld.wolfram.com/images/gifs/DragonCurve.gif"  width="250" height="250" /> 
+    <figcaption style="text-align: right; color=#FFF"><p>Credit to  <a href ="http://mathworld.wolfram.com/DragonCurve.html" target="_blank">Wolfram Math</a>  for this picture</p></figcaption>
+</figure></div></div>
+            <h3>Novel coloring on Dragon Curve from performance boost tactic</h3>
+            <br> 
+            <h4>The Dragon Curve is found by iteratively duplicating and rotating, starting with just a single line segment. It can be understood as a sequence of line segments connected end to end,
+            each with an orientation of either up, down, left, or right. All methods of generating this sequence of line segment orientations involved storing the entirety of the sequence in memory,
+            which can be prohibitively expensive. Suppose I wanted the \(\left({2^{200}}\right)^{th}\) line segment orientation, then I would have to calculate all previous segments and refer to them in the computation.
+            <br>
+            <br>
+            In the first gif, notice if you want to calculate the \(2^n + x\) segment direction where \(x{<}2^n\), you take the \((2^n-1-x)\) segment and rotate it \(90^\circ\). Suppose
+            we had a function \(f\) that took the number \(n\) to the number of times that the \(n^{th}\) line segment in the Dragon Curve had been rotated  \(90^\circ\), then 
+            \(f(0)=0\) and we can recursively determine that for any number \(x{>}0\) that has binary string representation \(1x_1x_2\cdots x_n\), that
+            \[f(1x_1\cdots x_n) = 1+f(\,(1-x_1)(1-x_2)\cdots(1-x_n)\,)\]
+            For example, the number 5 has binary string representation 101, so \(f(5)=1+f(2)\) where 2 has binary string representation \(10=(1-0)(1-1)\). Through trial and error,
+            I was able to show the function \(f(x)=f(x_1\cdots x_n)=x_1 + x_1\oplus x_2 +x_2\oplus x_3 +\cdots + x_{n-1}\oplus x_n\) has this property, where \(\oplus\) is the XOR operator on binary bits.
+            
+           <br><br>
+           For computer scientists, it can simply be defined equivalently as \(f(n) = (n{>}{>}1) \land n\) where \({>>}\) and \(\land\) are left shifting and XOR-ing respectively. This operation 
+           is time-complexity and space-complexity \(O(\log n)\), as opposed to the space-complexity \(O(n \log n)\) of naive approaches. Additionally, this function shows there is a close connection between
+            binary representation of a number and it's segment on the Dragon Curve, that can be leveraged for novel coloring. These colorings below are different color-ramps that depend on the proportion of 1's in the binary representation at that step. 
+           
+ 
+            
+
+            </h4>
+            <img src="drag2.png"  width="90%"  style="margin:30px 30px"/><img src="drag.png"  width="90%"  style="margin:30px 30px"/>
+            
+            
+         </div>
+      </div>
+      </div>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+   </body>
+</html>
